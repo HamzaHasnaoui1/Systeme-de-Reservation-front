@@ -1,0 +1,45 @@
+<div class="container">
+  <button type="button" class="btn btn-primary mt-5" routerLink="/">Bienvenue </button>
+
+  <nav class="mt-4">
+    <ul class="nav nav-pills">
+
+      <li class="nav-item dropdown">
+        <a class="nav-link text-success dropdown-toggle" href="#" id="reservationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-calendar-check-fill"></i> Réservation
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="reservationDropdown">
+          <li><a class="dropdown-item" routerLink="/reservation">Liste Réservation</a></li>
+          <li><a class="dropdown-item" routerLink="/addReservation">Ajouter Réservation</a></li>
+          <li><a class="dropdown-item" routerLink="/updateReservation">Modifier Réservation</a></li>
+          <li><a class="dropdown-item" href="#">Supprimer Réservation</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link text-warning dropdown-toggle" href="#" id="paiementDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-credit-card-fill"></i> Paiement
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="paiementDropdown">
+          <li><a class="dropdown-item" routerLink="/addPaiement">Ajouter paiement</a></li>
+          <li><a class="dropdown-item" routerLink="/updatePaiement">Modifier paiement</a></li>
+          <li><a class="dropdown-item" href="#">Supprimer paiement</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link text-danger dropdown-toggle" id="evenementDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-calendar-event-fill"></i> Événement
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="evenementDropdown">
+          <li><a class="dropdown-item" routerLink="/evenement">Liste Événement</a></li>
+          <li><a class="dropdown-item" routerLink="/addEvenement">Ajouter Événement</a></li>
+          <li><a class="dropdown-item" routerLink="/updateEvenement">Modifier Événement</a></li>
+          <li><a class="dropdown-item" href="#">Supprimer Événement</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+
+</div>

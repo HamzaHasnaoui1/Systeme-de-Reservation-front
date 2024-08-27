@@ -1,0 +1,21 @@
+<app-home></app-home><br>
+<table class="table table-striped table-hover">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Nom</th>
+    <th scope="col">Date</th>
+    <th scope="col">Lieu</th>
+    <th scope="col">Nombre de places</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let e of listEvenements">
+    <td>{{e.id}}</td>
+    <td>{{e.nom}}</td>
+    <td>{{e.date}}</td>
+    <td>{{e.lieu}}</td>
+    <td>{{e.nbPlace}}</td>
+  </tr>
+  </tbody>
+</table>
