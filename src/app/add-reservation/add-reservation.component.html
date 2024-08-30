@@ -1,1 +1,24 @@
-<p>add-reservation works!</p>
+<app-home></app-home>
+<div class="container mt-5">
+  <h2 class="text-center text-primary">Ajouter Reservation</h2>
+
+  <form (ngSubmit)="addReservation()" #reservForm="ngForm">
+
+    <div class="mb-3">
+      <label for="userId" class="form-label">User ID</label>
+      <input type="number" id="userId" class="form-control" [(ngModel)]="reservation.userId" name="userId" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="evenementId" class="form-label">Evenement ID</label>
+      <input type="number" id="evenementId" class="form-control" [(ngModel)]="reservation.evenementId" name="evenementId" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="nbPlaceReserves" class="form-label">Nombre de place</label>
+      <input type="number" id="nbPlaceReserves" class="form-control" [(ngModel)]="reservation.nbPlaceReserves" name="nbPlaceReserves" required>
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="reservForm.invalid">Ajouter reservation</button>
+
+  </form>
+</div>

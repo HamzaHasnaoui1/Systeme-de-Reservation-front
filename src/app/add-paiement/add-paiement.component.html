@@ -1,1 +1,24 @@
-<p>add-paiement works!</p>
+<app-home></app-home>
+<div class="container mt-5">
+  <h2 class="text-center text-primary">Ajouter Paiement</h2>
+
+  <form (ngSubmit)="addPaiement()" #paiementForm="ngForm">
+
+    <div class="mb-3">
+      <label for="reservationId" class="form-label">Reservation ID</label>
+      <input type="number" id="reservationId" class="form-control" [(ngModel)]="paiement.reservationId" name="reservationId" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="montant" class="form-label">Montant</label>
+      <input type="number" id="montant" class="form-control" [(ngModel)]="paiement.montant" name="montant" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <input type="text" id="description" class="form-control" [(ngModel)]="paiement.description" name="description" required>
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="paiementForm.invalid">Ajouter </button>
+
+  </form>
+</div>
