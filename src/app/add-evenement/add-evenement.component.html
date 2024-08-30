@@ -1,1 +1,42 @@
-<p>add-evenement works!</p>
+<app-home></app-home>
+<div class="container mt-5">
+  <h2 class="text-center text-primary">Ajouter un Événement</h2>
+
+  <form (ngSubmit)="addEvent()" #eventForm="ngForm">
+
+    <div class="mb-3">
+      <label for="nom" class="form-label">Nom de l'Événement</label>
+      <input type="text" id="nom" class="form-control" [(ngModel)]="evenement.nom" name="nom" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="lieu" class="form-label">Lieu</label>
+      <input type="text" id="lieu" class="form-control" [(ngModel)]="evenement.lieu" name="lieu" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="date" class="form-label">Date</label>
+      <input type="text" id="date" class="form-control"
+             [(ngModel)]="formattedDate" name="date" required placeholder="yyyy/MM/dd"
+             (change)="onDateChange($event)">
+    </div>
+
+
+    <div class="mb-3">
+      <label for="nbPlace" class="form-label">Nombre de Places</label>
+      <input type="number" id="nbPlace" class="form-control" [(ngModel)]="evenement.nbPlace" name="nbPlace" required>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="eventForm.invalid">Ajouter l'Événement</button>
+
+  </form>
+
+  <div *ngIf="evenements.length > 0" class="mt-5">
+    <h3 class="text-center">Liste des Événements</h3>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let event of evenements">
+        {{ event.nom }} - {{ event.lieu }} - {{ event.date | date:'dd/MM/yyyy' }} - {{ event.nbPlace }} places
+      </li>
+    </ul>
+  </div>
+</div>

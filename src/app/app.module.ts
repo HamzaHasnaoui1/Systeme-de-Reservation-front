@@ -15,6 +15,7 @@ import { UpdatePaiementComponent } from './update-paiement/update-paiement.compo
 import { AddReservationComponent } from './add-reservation/add-reservation.component';
 import { UpdateReservationComponent } from './update-reservation/update-reservation.component';
 import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -29,13 +30,15 @@ import {HttpClientModule} from "@angular/common/http";
     AddPaiementComponent,
     UpdatePaiementComponent,
     AddReservationComponent,
-    UpdateReservationComponent
+    UpdateReservationComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

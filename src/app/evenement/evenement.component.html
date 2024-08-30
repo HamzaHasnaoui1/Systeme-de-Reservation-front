@@ -13,7 +13,7 @@
   <tr *ngFor="let e of listEvenements">
     <td>{{e.id}}</td>
     <td>{{e.nom}}</td>
-    <td>{{e.date}}</td>
+    <td>{{e.date|date :'dd/mm/yyyy'}}</td>
     <td>{{e.lieu}}</td>
     <td>{{e.nbPlace}}</td>
   </tr>

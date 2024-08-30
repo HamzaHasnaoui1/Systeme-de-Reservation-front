@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable, observable} from "rxjs";
 import {environment} from "../../environments/environment";
+import {evenementDto} from "../models/evenement.model";
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,10 @@ export class EvenementService {
 
   public getEvenement(): Observable<any> {
     return this.http.get(environment.apiUrl+"/Evenemnet/eventsList");
+  }
+
+  saveEvenement(evenement: evenementDto): Observable<Array<evenementDto>> {
+    return this.http.post<Array<evenementDto>>(environment.apiUrl+"/Evenemnet/addEvent", evenement);
   }
 }
 
