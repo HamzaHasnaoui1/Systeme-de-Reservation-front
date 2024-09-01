@@ -30,13 +30,4 @@
     <button type="submit" class="btn btn-success" [disabled]="eventForm.invalid">Ajouter l'Événement</button>
 
   </form>
-
-  <div *ngIf="evenements.length > 0" class="mt-5">
-    <h3 class="text-center">Liste des Événements</h3>
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let event of evenements">
-        {{ event.nom }} - {{ event.lieu }} - {{ event.date | date:'dd/MM/yyyy' }} - {{ event.nbPlace }} places
-      </li>
-    </ul>
-  </div>
 </div>

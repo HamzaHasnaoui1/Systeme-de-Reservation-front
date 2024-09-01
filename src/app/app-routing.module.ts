@@ -16,13 +16,13 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   {path: 'reservation', component: ReservationComponent },
   {path:'addReservation', component: AddReservationComponent },
-  {path:'updateReservation', component: UpdateReservationComponent },
+  {path:'updateReservation/:id', component: UpdateReservationComponent },
   {path:'paiement', component: PaiementComponent },
   {path:'addPaiement', component: AddPaiementComponent },
   {path:'updatePaiement', component: UpdatePaiementComponent },
   {path:'evenement', component: EvenementComponent },
   {path:'addEvenement', component: AddEvenementComponent },
-  {path:'updateEvenement', component: UpdateEvenementComponent },
+  {path:'updateEvenement/:id', component: UpdateEvenementComponent },
 ];
 
 @NgModule({

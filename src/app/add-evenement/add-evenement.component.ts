@@ -24,12 +24,12 @@ export class AddEvenementComponent {
   evenements: Array<evenementDto> = [];
 
   constructor(private evenementService: EvenementService, private datePipe: DatePipe) {
-    this.formattedDate = this.datePipe.transform(this.evenement.date, 'yyyy-MM-dd'); // ISO format pour l'input de type date
+    this.formattedDate = this.datePipe.transform(this.evenement.date, 'yyyy-MM-dd');
   }
 
   onDateChange(event: Event): void {
     const input = event.target as HTMLInputElement;
-    this.evenement.date = new Date(input.value); // Directement assigner la date saisie
+    this.evenement.date = new Date(input.value);
   }
 
   addEvent(): void {

@@ -6,6 +6,7 @@
     <th scope="col">EvenementId</th>
     <th scope="col">UserID</th>
     <th scope="col">Nombre de place</th>
+    <th scope="col">Actions</th>
   </tr>
   </thead>
   <tbody>
@@ -14,6 +15,16 @@
     <td>{{r.evenementId}}</td>
     <td>{{r.userId}}</td>
     <td>{{r.nbPlaceReserves}}</td>
+    <td>
+      <!-- Bouton Modifier -->
+      <button class="btn btn-primary btn-sm me-2 " (click)="editReserv(r.id)">
+        <i class="bi bi-pencil "></i>
+      </button>
+      <!-- Bouton Supprimer -->
+      <button class="btn btn-danger btn-sm" >
+        <i class="bi bi-trash"></i>
+      </button>
+    </td>
   </tr>
   </tbody>
 </table>

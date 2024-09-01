@@ -17,7 +17,15 @@ export class ReservationService {
     return this.http.get(environment.apiUrl + "/Reservation/reservationList");
   }
 
-  saveReservation(reseration: reservationDto): Observable<Array<reservationDto>> {
-    return this.http.post<Array<reservationDto>>(environment.apiUrl + "/Reservation/addReservation", reseration);
+  saveReservation(reservation: reservationDto): Observable<Array<reservationDto>> {
+    return this.http.post<Array<reservationDto>>(environment.apiUrl + "/Reservation/addReservation", reservation);
+  }
+
+  getReservationById(id: number): Observable<reservationDto> {
+    return this.http.get<reservationDto>(`${environment.apiUrl}/Reservation/getReservationById/${id}`);
+  }
+
+  updateReservation(id: number, reservation: reservationDto): Observable<reservationDto> {
+    return this.http.put<reservationDto>(`${environment.apiUrl}/Reservation/updateReserv/${id}`, reservation);
   }
 }
