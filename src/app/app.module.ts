@@ -15,7 +15,8 @@ import { UpdatePaiementComponent } from './update-paiement/update-paiement.compo
 import { AddReservationComponent } from './add-reservation/add-reservation.component';
 import { UpdateReservationComponent } from './update-reservation/update-reservation.component';
 import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -31,12 +32,14 @@ import {FormsModule} from "@angular/forms";
     UpdatePaiementComponent,
     AddReservationComponent,
     UpdateReservationComponent,
+    SearchPipe,
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
         FormsModule,
+        ReactiveFormsModule,
 
     ],
   providers: [],

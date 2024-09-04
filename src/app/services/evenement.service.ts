@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
-import { evenementDto } from '../models/evenement.model';
+import {evenementDto, EvenementPage} from '../models/evenement.model';
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +27,20 @@ export class EvenementService {
     return this.http.put<evenementDto>(`${environment.apiUrl}/Evenement/updateEvent/${id}`, evenement);
   }
 
+  /*public searchEvents(keyword : string):Observable<Array<evenementDto>>{
+    return this.http.get<Array<evenementDto>>(environment.apiUrl+"/Evenement/search?keyword="+keyword)
+  }*/
 
+  public getEventPage( page : number, size : number):Observable<any>{
+    return this.http.get(environment.apiUrl+'/Evenement/pageOperations', {
+    params: {
+      page: page.toString(),
+        size: size.toString()
+    }
+  });
+  }
 
-
+  public deleteEvent (id:number):Observable<void>{
+    return this.http.delete<void>(`${environment.apiUrl}/Evenement/deleteEvent/${id}`)
+  }
 }
