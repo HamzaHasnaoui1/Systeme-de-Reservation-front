@@ -15,7 +15,7 @@ export class EvenementComponent implements OnInit {
   errorMessage: string | undefined;
   searchFormGroup: FormGroup;
   currentPage : number =0;
-  pageSize : number =5;
+  pageSize : number =8;
   totalPages!:number;
 
   constructor(private evenementService: EvenementService, private router: Router, private fb: FormBuilder) {

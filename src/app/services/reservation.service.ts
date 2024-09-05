@@ -28,4 +28,18 @@ export class ReservationService {
   updateReservation(id: number, reservation: reservationDto): Observable<reservationDto> {
     return this.http.put<reservationDto>(`${environment.apiUrl}/Reservation/updateReserv/${id}`, reservation);
   }
+
+  public getEventPage( page : number, size : number):Observable<any>{
+    return this.http.get(environment.apiUrl+'/Reservation/pageOperations', {
+      params: {
+        page: page.toString(),
+        size: size.toString()
+      }
+    });
+  }
+
+  public deleteReservation (id:number):Observable<void>{
+    return this.http.delete<void>(`${environment.apiUrl}/Reservation/deleteReservation/${id}`)
+  }
+
 }
