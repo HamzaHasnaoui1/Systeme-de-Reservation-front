@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {evenementDto, EvenementPage} from "../models/evenement.model";
-import { EvenementService } from "../services/evenement.service";
+import {evenementDto, EvenementPage} from "../../models/evenement.model";
+import { EvenementService } from "../../services/evenement.service";
 import { Router } from "@angular/router";
 import {catchError, map, Observable, throwError} from "rxjs";
 import { FormBuilder, FormGroup } from "@angular/forms";

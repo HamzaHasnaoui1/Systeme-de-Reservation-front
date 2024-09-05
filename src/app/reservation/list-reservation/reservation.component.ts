@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ReservationService} from "../services/reservation.service";
-import {reservationDto} from "../models/reservation.model";
+import {ReservationService} from "../../services/reservation.service";
+import {reservationDto} from "../../models/reservation.model";
 import {Router} from "@angular/router";
 
 @Component({

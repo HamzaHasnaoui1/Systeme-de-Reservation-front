@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {paiementDto} from "../models/paiement.model";
-import {ReservationService} from "../services/reservation.service";
-import {PaiementService} from "../services/paiement.service";
+import {paiementDto} from "../../models/paiement.model";
+import {ReservationService} from "../../services/reservation.service";
+import {PaiementService} from "../../services/paiement.service";
 
 @Component({
   selector: 'app-add-paiement',

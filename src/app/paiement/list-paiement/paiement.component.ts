@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {paiementDto} from "../models/paiement.model";
-import {PaiementService} from "../services/paiement.service";
+import {paiementDto} from "../../models/paiement.model";
+import {PaiementService} from "../../services/paiement.service";
 
 @Component({
   selector: 'app-paiement',

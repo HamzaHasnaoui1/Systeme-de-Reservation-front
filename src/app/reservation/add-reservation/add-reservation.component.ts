@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {reservationDto} from "../models/reservation.model";
-import {ReservationService} from "../services/reservation.service";
+import {reservationDto} from "../../models/reservation.model";
+import {ReservationService} from "../../services/reservation.service";
 
 @Component({
   selector: 'app-add-reservation',

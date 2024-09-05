@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {EvenementComponent} from "../evenement/evenement.component";
+import {EvenementComponent} from "../evenement/list-evenement/evenement.component";
 import {evenementDto, EvenementPage} from "../models/evenement.model";
 
 @Pipe({

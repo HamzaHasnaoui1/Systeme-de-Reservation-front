@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DatePipe } from '@angular/common';
-import { evenementDto } from '../models/evenement.model';
-import { EvenementService } from '../services/evenement.service';
+import { evenementDto } from '../../models/evenement.model';
+import { EvenementService } from '../../services/evenement.service';
 
 @Component({
   selector: 'app-add-evenement',

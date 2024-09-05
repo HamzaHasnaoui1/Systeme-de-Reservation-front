@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { EvenementService } from '../services/evenement.service';
-import { evenementDto } from '../models/evenement.model';
+import { EvenementService } from '../../services/evenement.service';
+import { evenementDto } from '../../models/evenement.model';
 import { DatePipe } from '@angular/common';
 
 @Component({
